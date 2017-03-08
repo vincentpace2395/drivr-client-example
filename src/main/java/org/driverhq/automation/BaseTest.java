@@ -21,7 +21,7 @@ import org.testng.annotations.BeforeTest;
  * Lesser General Public License for more details.
  *
  */
-public class ExampleBaseTest extends TestProvider {
+public class BaseTest extends TestProvider {
 
     protected WebDriver driver;
 
@@ -32,5 +32,9 @@ public class ExampleBaseTest extends TestProvider {
     public void initBrowserBeforeTest() {
         BrowserFactory browserFactory = new BrowserFactory(BrowserType.CHROME);
         driver = browserFactory.getBrowserInstance(DriverRunType.DIRECT);
+    }
+
+    protected void navigateTo(String url) {
+        driver.get(url);
     }
 }
