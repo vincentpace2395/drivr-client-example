@@ -1,9 +1,10 @@
 package org.driverhq.automation;
 
-import org.drivrhq.drivr.browser.BrowserFactory;
-import org.drivrhq.drivr.browser.enums.BrowserType;
-import org.drivrhq.drivr.browser.enums.DriverRunType;
-import org.drivrhq.drivr.runnr.BaseTest;
+import org.drivrhq.drivr.runnr.TestProvider;
+import org.drivrhq.drivr.web.browser.BrowserFactory;
+import org.drivrhq.drivr.web.browser.enums.BrowserType;
+import org.drivrhq.drivr.web.browser.enums.DriverRunType;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 
 /**
@@ -20,7 +21,9 @@ import org.testng.annotations.BeforeTest;
  * Lesser General Public License for more details.
  *
  */
-public class ExampleBaseTest extends BaseTest {
+public class ExampleBaseTest extends TestProvider {
+
+    protected WebDriver driver;
 
     /**
      * Method used to initialize the browser before the test.
